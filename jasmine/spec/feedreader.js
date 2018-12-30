@@ -59,7 +59,7 @@ $(function() {
          */
 
          it('check to see if the menu is hidden'), function() {
-            expect('click').toHaveBeenTriggeredOn($('.menu-icon-link'));
+            expect('click').not.toHaveBeenTriggeredOn($('.menu-icon-link'));
          }
 
        });
