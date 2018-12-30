@@ -61,7 +61,7 @@ $(function() {
          it('check to see if the menu is hidden'), function() {
             // expect('click').not.toHaveBeenTriggeredOn($('.menu-icon-link'));
             expect($('.menu-hidden')).not.toExist()
-         }
+         }  
 
        });
 
