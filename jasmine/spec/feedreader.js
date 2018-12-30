@@ -58,11 +58,9 @@ $(function() {
          * hiding/showing of the menu element.
          */
 
-         it('check to see if the menu is hidden'), function() {
-            // expect('click').not.toHaveBeenTriggeredOn($('.menu-icon-link'));
-            expect($('.menu-hidden')).not.toExist()
-         }  
-
+         it('check to see if the menu is hidden', function() {
+            expect('click').not.toHaveBeenTriggeredOn($('.menu-icon-link'));
+            // expect($('body.menu-hidden')).toBeInDOM();
        });
 
          /* TODO: Write a test that ensures the menu changes
