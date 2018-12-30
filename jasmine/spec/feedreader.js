@@ -59,7 +59,7 @@ $(function() {
          */
 
          it('check to see if the menu is hidden', function() {
-            expect($('body')).toContainElement('menu-hidden')
+            expect($('body')).toHaveClass('menu-hidden');
             // expect($('<body class="menu-hidden"></body>')).toHaveClass('menu-hidden');
             // expect($('<div class="some-class"></div>')).toHaveClass("some-class")
        });
