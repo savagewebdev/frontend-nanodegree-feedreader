@@ -69,7 +69,7 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
           it('check to ensure that the menu changes', function() {
-            expect('click').toHaveBeenTriggeredOn($('.menu-icon-link'));
+            expect('click').toHaveBeenTriggeredOn($('.icon-list'));
           });
   });
     /* TODO: Write a new test suite named "Initial Entries" */
