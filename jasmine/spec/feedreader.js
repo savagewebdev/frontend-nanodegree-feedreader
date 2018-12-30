@@ -62,7 +62,7 @@ $(function() {
             expect('click').not.toHaveBeenTriggeredOn($('.menu-icon-link'));
             // expect($('body.menu-hidden')).toBeInDOM();
        });
-  }
+  });
          /* TODO: Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
           * should have two expectations: does the menu display when
