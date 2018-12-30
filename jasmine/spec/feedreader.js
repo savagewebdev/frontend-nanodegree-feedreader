@@ -69,7 +69,8 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
           it('check to ensure that the menu changes', function() {
-            expect('click').toHaveBeenTriggeredOn($('.icon-list'));
+            let spyEvent = spyOnEvent($('.menu-icon-link'), 'click');
+            expect(spyEvent).toHaveBeenTriggered();
           });
   });
     /* TODO: Write a new test suite named "Initial Entries" */
