@@ -39,7 +39,7 @@ $(function() {
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
-         
+
            it('check if each individual feed is named', function() {
             for (let feed of allFeeds) {
                expect(feed.name).toBeDefined();
@@ -52,12 +52,17 @@ $(function() {
     /* TODO: Write a new test suite named "The menu" */
    describe('The menu', function() {
 
-
         /* TODO: Write a test that ensures the menu element is
          * hidden by default. You'll have to analyze the HTML and
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
+
+         it('check to see if the menu is hidden'), function() {
+           expect($('body')).toBeHidden();
+         }
+
+       });
 
          /* TODO: Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
