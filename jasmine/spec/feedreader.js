@@ -59,7 +59,7 @@ $(function() {
          */
 
          it('check to see if the menu is hidden'), function() {
-           expect($('body.menu-hidden')).toBeHidden();
+           expect($('.menu-hidden')).toBeHidden();
          }
 
        });
