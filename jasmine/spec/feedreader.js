@@ -59,8 +59,7 @@ $(function() {
          */
 
          it('check to see if the menu is hidden'), function() {
-           var spyEvent = spyOnEvent(feedList, 'click');
-           expect(spyEvent).toHaveBeenTriggered()
+            expect('click').toHaveBeenTriggeredOn($('.feed-list'))
          }
 
        });
