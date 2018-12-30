@@ -60,7 +60,7 @@ $(function() {
 
          it('check to see if the menu is hidden', function() {
             // expect('click').not.toHaveBeenTriggeredOn($('.menu-icon-link'));
-            expect($('body.menu-hidden')).toBeInDOM();
+            expect($('body')).toHaveClass('menu-hidden');
        });
   });
          /* TODO: Write a test that ensures the menu changes
