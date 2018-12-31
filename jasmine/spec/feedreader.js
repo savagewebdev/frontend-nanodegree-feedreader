@@ -51,9 +51,9 @@ $(function() {
 
     /* TODO: Write a new test suite named "The menu" */
    describe('The menu', function() {
-
-         beforeEach(function() {
-           setFixtures('<a class="menu-icon-link" id="grab" href="#"><i class="icon-list"></i> </a>');
+      let menuIcon;
+//         beforeEach(function() {
+//           setFixtures('<a class="menu-icon-link" id="grab" href="#"><i class="icon-list"></i> </a>');
 
         });
 
@@ -73,11 +73,14 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
           it('check to ensure that the menu changes', function() {
-            var spyEvent = spyOnEvent('.menu-icon-link', 'click');
-            $('.menu-icon-link').click();
-            expect('click').toHaveBeenTriggeredOn('.menu-icon-link');
-            expect(spyEvent).toHaveBeenTriggered();
-          });
+//            var spyEvent = spyOnEvent('.menu-icon-link', 'click');
+//            $('.menu-icon-link').click();
+//            expect('click').toHaveBeenTriggeredOn('.menu-icon-link');
+//            expect(spyEvent).toHaveBeenTriggered();
+            menuIcon = $('.menu-icon-link');
+            menuIcon.click();
+            expect($('body').hasClass('menu-hidden')).toBe(false);
+//          });
   });
     /* TODO: Write a new test suite named "Initial Entries" */
 
