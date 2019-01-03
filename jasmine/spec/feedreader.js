@@ -50,12 +50,10 @@ $(function() {
 
 
     /* TODO: Write a new test suite named "The menu" */
+   
    describe('The menu', function() {
       let menuIcon;
-//         beforeEach(function() {
-//           setFixtures('<a class="menu-icon-link" id="grab" href="#"><i class="icon-list"></i> </a>');
-
-        });
+        
 
         /* TODO: Write a test that ensures the menu element is
          * hidden by default. You'll have to analyze the HTML and
@@ -72,24 +70,38 @@ $(function() {
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
+         
           it('check to ensure that the menu changes', function() {
-//            var spyEvent = spyOnEvent('.menu-icon-link', 'click');
-//            $('.menu-icon-link').click();
-//            expect('click').toHaveBeenTriggeredOn('.menu-icon-link');
-//            expect(spyEvent).toHaveBeenTriggered();
             menuIcon = $('.menu-icon-link');
             menuIcon.click();
             expect($('body').hasClass('menu-hidden')).toBe(false);
-//          });
-  });
-    /* TODO: Write a new test suite named "Initial Entries" */
+            menuIcon.click();
+            expect($('body').hasClass('menu-hidden')).toBe(true);
+      });
+   });
 
+    /* TODO: Write a new test suite named "Initial Entries" */
+   
+   describe('Initial Entries', function() {
+      
         /* TODO: Write a test that ensures when the loadFeed
          * function is called and completes its work, there is at least
          * a single .entry element within the .feed container.
          * Remember, loadFeed() is asynchronous so this test will require
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
+         
+      beforeEach(function(done) {
+         spyOn(loadFeed);
+         done();
+      }
+      
+      it('check the loadFeed function', function() {
+         expect(loadFeed).toHaveBeenCalled();
+         expect($('.feed')).toContainElement('.entry')
+      });
+      
+   });
 
     /* TODO: Write a new test suite named "New Feed Selection" */
 
@@ -97,4 +109,6 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+         
+         
 }());
