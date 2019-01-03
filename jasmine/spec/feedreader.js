@@ -108,6 +108,8 @@ $(function() {
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
+         
+         https://matthewcranford.com/feed-reader-walkthrough-part-4-async-tests/ for assistance
          */
          
    });
