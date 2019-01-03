@@ -83,7 +83,7 @@ $(function() {
     /* TODO: Write a new test suite named "Initial Entries" */
    
    describe('Initial Entries', function() {
-      
+
         /* TODO: Write a test that ensures when the loadFeed
          * function is called and completes its work, there is at least
          * a single .entry element within the .feed container.
@@ -91,14 +91,12 @@ $(function() {
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
          
-      beforeEach(function(done) {
-         spyOn(loadFeed);
-         done();
-      }
-      
+      beforeEach(async function(done) {
+         await loadFeed(0, done); // Pay attention to function parameters when testing
+      });
+         
       it('check the loadFeed function', function() {
-         expect(loadFeed).toHaveBeenCalled();
-         expect($('.feed')).toContainElement('.entry')
+         expect($('.feed' )).toContainElement('.entry')
       });
       
    });
