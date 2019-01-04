@@ -117,7 +117,7 @@ $(function() {
          it('Check to ensure feed differentiation', function() { 
             let compareMe = new Set(allFeeds); // The allFeeds array is turned into a Set() to remove any duplicates, thus differentiating feeds.
             compareMe.forEach(function(value, value2, set) { 
-               expect(compareMe.size).toBe(allFeeds.length); // Tests to see whether the set is still the same size as the array...
+               expect(compareMe.size).toBe(allFeeds.length); // A test to see whether the set is still the same size as the array.
                expect(allFeeds).toContain(value); 
                // ...then the actual array is tested to ensure it contains each item in the differentiated set.
             });
