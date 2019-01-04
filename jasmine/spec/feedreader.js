@@ -115,10 +115,11 @@ $(function() {
          });
          
          it('Check to ensure feed differentiation', function() { 
-            let compareMe = new Set(allFeeds).forEach(function(value, value2, set) { 
-               // Runs allFeeds[] through a Set() to automatically remove any possible duplicates.
+            let compareMe = new Set(allFeeds); // The allFeeds array is turned into a Set() to remove any duplicates, thus differentiating feeds.
+            compareMe.forEach(function(value, value2, set) { 
+               expect(compareMe.size).toBe(allFeeds.length); // Tests to see whether the set is still the same size as the array...
                expect(allFeeds).toContain(value); 
-               // Tests to ensure that the duplicate-less Set() matches the allFeeds[] array perfectly.
+               // ...then the actual array is tested to ensure it contains each item in the differentiated set.
             });
          });    
    });
