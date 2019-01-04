@@ -91,13 +91,13 @@ $(function() {
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
          
-      beforeEach(async function(done) {
-         await loadFeed(0, done); // Pay attention to function parameters when testing
-      });
+         beforeEach(async function(done) {
+            await loadFeed(0, done); // Pay attention to function parameters when testing
+         });
          
-      it('check the loadFeed function', function() {
-         expect($('.feed' )).toContainElement('.entry')
-      });
+         it('check the loadFeed function', function() {
+            expect($('.feed')).toContainElement('.entry')
+         });
       
    });
 
@@ -108,10 +108,19 @@ $(function() {
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
-         
-         https://matthewcranford.com/feed-reader-walkthrough-part-4-async-tests/ for assistance
          */
          
+         beforeEach(async function(done) {
+            await loadFeed(0, done);
+         });
+         
+         it('Check to ensure feed differentiation', function() { 
+            let compareMe = new Set(allFeeds).forEach(function(value, value2, set) { 
+               // Runs allFeeds[] through a Set() to automatically remove any possible duplicates.
+               expect(allFeeds).toContain(value); 
+               // Tests to ensure that the duplicate-less Set() matches the allFeeds[] array perfectly.
+            });
+         });    
    });
          
 }());
