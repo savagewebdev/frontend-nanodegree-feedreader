@@ -4,12 +4,14 @@
 
 * [Dependencies](#Dependencies)
 * [Contributing](#Contributing)
+* [Downloading](#Downloading)
 * [Running](#Running)
 * [Testing](#Testing)
 * [Authors](#Authors)
 
 ## Dependencies
 
+[RSS Feed File Location](https://github.com/savagewebdev/frontend-nanodegree-feedreader) - The location of the RSS application's file for download and/or cloning.
 [Udacity Pre-Existing Code](https://github.com/udacity/frontend-nanodegree-feedreader) - Much of the RSS Feed Reader's pre-existing engine has been provided in advance by Udacity.
 [Jasmine Testing Framework ](https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.3.0/jasmine.min.js) - The Jasmine Framework for testing Javascript behavior.
 [Jquery Framework](https://code.jquery.com/jquery-3.3.1.min.js) - Jquery Framework has been included for HTML/DOM selection.
@@ -18,6 +20,10 @@
 ## Contributing
 
 This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+
+## Downloading
+
+Robin's RSS Feed Reader project can be downloaded or cloned from the the github site located at [RSS Feed Reader](https://github.com/savagewebdev/frontend-nanodegree-feedreader). Once it has been downloaded or cloned, proceed to open up the index file in your browser to start the RSS application. The file should be located in the respective download or cloned folder.
 
 ## Running the RSS Feed Reader
 
