@@ -51,7 +51,9 @@ $(function() {
             await loadFeed(0, done); // Pay attention to function parameters when testing
          });
          it('check the loadFeed function', function() {
-            expect($('.feed')).toContainElement('.entry')
+            let feedEntry = $(".feed");
+            let entry = feedEntry.children();
+            expect(entry.length).toBeGreaterThan(0);
          });
    });
    
