@@ -16,6 +16,7 @@
 [Jasmine Testing Framework ](https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.3.0/jasmine.min.js) - The Jasmine Framework for testing Javascript behavior.
 [Jquery Framework](https://code.jquery.com/jquery-3.3.1.min.js) - Jquery Framework has been included for HTML/DOM selection.
 [Jquery Framework for Jasmine](https://raw.githubusercontent.com/velesin/jasmine-jquery/master/lib/jasmine-jquery.js) - Additionally, the Jasmine Jquery Framework has been included for DOM selection and manipulation within Jasmine.
+[Feed Reader Walkthrough](https://matthewcranford.com/feed-reader-walkthrough-part-4-async-tests/) - Conceptual assistance courtesy of Matthew Cranford's walkthrough.
 
 ## Contributing
 
