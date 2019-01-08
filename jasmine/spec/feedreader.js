@@ -58,17 +58,23 @@ $(function() {
    });
    
    describe('New Feed Selection', function() {
+      const feedMe = $(".feed").children();
+      const firstfeedArray = [];
+      const secondfeedArray = [];
+      
          beforeEach(async function(done) {
-         await loadFeed(0, done);
+            await loadFeed(0);
+            Array.from(feedMe).forEach(function(entry) {
+               firstfeedArray.push(entry);
+            });
+            await loadFeed(1, done);
+            Array.from(feedMe).forEach(function(entry) {
+               secondfeedArray.push(entry);
+            });
          });
          
          it('Check to ensure feed differentiation', function() { 
-            let compareMe = new Set(allFeeds); // The allFeeds array is turned into a Set() to remove any duplicates,  successfully differentiating feeds.
-            compareMe.forEach(function(value, value2, set) { 
-               expect(compareMe.size).toBe(allFeeds.length); // A check to see whether the set is still the same size as the array after removing possible duplicate feeds.
-               expect(allFeeds).toContain(value); 
-               // ...then the actual array is tested to ensure it contains each item in the differentiated set.
-            });
+               expect(firstfeedArray === secondfeedArray).toBe(false); 
          });    
    });
 }());
