@@ -51,8 +51,7 @@ $(function() {
             await loadFeed(0, done); // Pay attention to function parameters when testing
          });
          it('check the loadFeed function', function() {
-            let feedEntry = $(".feed");
-            let entry = feedEntry.children();
+            let entry = document.querySelectorAll('.feed .entry-link .entry');
             expect(entry.length).toBeGreaterThan(0);
          });
    });
