@@ -57,23 +57,25 @@ $(function() {
    });
    
    describe('New Feed Selection', function() {
-      const feedMe = $(".feed").children();
+      const feedMe = $(".feed").html();
       const firstfeedArray = [];
       const secondfeedArray = [];
-      
          beforeEach(async function(done) {
-            await loadFeed(0);
-            Array.from(feedMe).forEach(function(entry) {
-               firstfeedArray.push(entry);
+            await loadFeed(0, function() {
+               Array.from(feedMe).forEach(function(entry, index) {
+                  firstfeedArray.push(entry, index);
+               });
             });
             await loadFeed(1, done);
-            Array.from(feedMe).forEach(function(entry) {
-               secondfeedArray.push(entry);
-            });
          });
          
          it('Check to ensure feed differentiation', function() { 
-               expect(firstfeedArray === secondfeedArray).toBe(false); 
+            Array.from(feedMe).forEach(function(entry, index) {
+               secondfeedArray.push(entry, index);
+            });
+            console.log(secondfeedArray);
+            console.log(firstfeedArray);
+            expect(firstfeedArray === secondfeedArray).toBe(false); 
          });    
    });
 }());
